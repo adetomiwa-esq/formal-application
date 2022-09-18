@@ -1,0 +1,440 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+/* this section is for the nav bar */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
+    background-color: rgb(6, 6, 119);
+    color: white;
+}
+
+.club-id {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: 50px;
+    margin: 0 7px;
+}
+
+.nav-links {
+    display: flex;
+    list-style-type: none;
+    width: 40%;
+    justify-content: space-around;
+}
+
+.toggle {
+    position: relative;
+    margin-right: 20px;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    cursor: pointer;
+    display: none;
+}
+
+.toggle div i{
+    position: absolute;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links li {
+    width: 120px;
+    text-align: center;
+    position: relative;
+    height: 25px;
+}
+
+.nav-links > li::after {
+    content: "";
+    height: 4px;
+    background-color: white;
+    width: 0;
+    transition: all 0.5s ease-in;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.nav-links > li:hover::after {
+    width: 100%;
+}
+
+
+/* This section is for the form and big logo */
+
+#form {
+    width: 60%;
+    border: 1px solid black;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+.form-heading {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.main {
+    display: flex;
+    padding: 8px;
+}
+
+.big-logo {
+    width: 40%;
+    justify-items: center;
+    text-align: center;
+    align-self: center;
+}
+
+.big-logo img {
+    margin: auto;
+}
+
+.form-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.form-body div label {
+    display: block;
+}
+
+.form-body div input {
+    width: 100%;
+    padding: 8px;
+}
+
+.form-body div input:focus {
+    outline: 0px;
+}
+
+
+.form-body .full {
+    grid-column: 1/3;
+
+}
+
+.form-body div .full {
+    width: 100%;
+}
+
+.submit-btn {
+    color: white;
+    background-color: blue;
+    transition: all 500ms ease-in-out;
+    font-size: 1.1em;
+    padding: 3px;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.submit-btn:hover {
+    background-color: rgb(6, 6, 119);
+    font-size: 1.4em;
+    box-shadow: 2px 2px 2px 2px  #b4b0b0;
+}
+
+.text {
+    min-height: 100px;
+    resize: vertical;
+    padding: 8px;
+}
+
+.text:focus {
+    outline: 0px;
+}
+
+
+.caution {
+    color: red;
+    font-size: 9px;
+    height: 13px;
+}
+
+input {
+    border: 1px solid rgb(128, 125, 125);
+}
+
+textarea {
+    border: 1px solid rgb(128, 125, 125);
+}
+
+
+/* list of registered members */
+.member {
+    border-bottom: 1px solid black;
+    margin-top: 5px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+}
+
+.active-members {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.member div {
+    margin-top: 7px;
+}
+
+.member div span {
+    margin-left: 7px;
+}
+
+.members {
+    width: 100%;
+}
+
+.member-msg {
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+
+
+.off-screen {
+    top: -2000%;
+    position: absolute;
+}
+
+
+
+/*Button Loader */
+.btn-anchor {
+    height: 40px;
+}
+
+.submit-btn {
+    width: 100%;
+}
+
+.loader {
+    margin: auto;
+    margin-top: -17px;
+    width: 15px;
+    height: 15px;
+    border: 3px solid black;
+    border-top-color: rgb(100, 95, 95);
+    border-radius: 50%;
+    animation: loading 0.65s ease-in-out infinite;
+    top: 6px;
+    left: 50%;
+    display: none;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}
+
+
+/* footer */
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    background-color: rgb(20, 19, 19);
+    margin-top: 0px;
+    padding-top: 15px;
+}
+
+.footer > div {
+    width: 22%;
+    margin-right: 17px;
+}
+
+.footer > div > div {
+    line-height: 1.9em;
+}
+
+.footer div h3 {
+    margin-bottom: 8px;
+    margin-top: 15px;
+}
+
+.socials {
+    width: 15%;
+}
+
+.socials > i{
+    font-size: 1.6em;
+    margin-right: 7px;
+}
+
+
+
+
+/* smaller screens */
+
+@media(max-width: 900px) {
+
+    .body {
+        overflow-y: hidden;
+    }
+
+    .big-logo img {
+        width: 200px;
+    }
+
+
+    .nav-links {
+        position: absolute;
+        background-color: blue;
+        justify-content: space-around;
+        top: 70px;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh);
+        align-items: center;
+        left: -2000px;
+        transition: left 500ms ease-in-out;
+    }
+
+    .links-slide-in {
+        left: 0px;
+        overflow-y: hidden;
+    }
+
+    .toggle {
+        margin-right: 25px;
+        display: block;
+    }
+
+    .close-sidelinks {
+        display: none;
+    }
+
+    .swap-in {
+        display: block;
+    }
+
+    .swap-out {
+        display: none;
+    }
+
+}
+
+
+@media(max-width: 600px) {
+
+    .main {
+        display: block;
+    }
+
+    #form {
+        width: 100%;
+    }
+
+    .big-logo {
+        display: none;
+    }
+
+    .caution {
+        font-size: 9px;
+    }
+
+    .active-members {
+        font-size: 1.6em;
+    }
+
+    .member div {
+        font-size: 0.9em;
+    }
+}
+
+
+@media(max-width: 500px) {
+    .form-body div{
+        grid-column: 1/3;
+        font-size: 0.9em;
+    }
+
+    .club-id {
+        font-size: 1.3em;
+    }
+
+    .nav-links {
+        font-size: 0.9em;
+    }
+
+    .form-heading {
+        font-size: 1.1em;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .caution {
+        font-size: 9px;
+    }
+
+    .active-members {
+        font-size: 1.4em;
+    }
+
+    .member div {
+        font-size: 0.9em;
+    }
+
+    .footer > div {
+        width: 200px;
+    }
+
+    .footer > div > div {
+        font-size: 0.8em;
+    }
+
+    .footer h3 {
+        font-size: 0.9em;
+    }
+
+    .footer div i {
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 350px) {
+    .club-id {
+        font-size: 1em;
+    }
+
+    .main {
+        font-size: 0.9em;
+    }
+
+    .caution {
+        font-size: 9px;
+    }
+
+    .active-members {
+        font-size: 1em;
+    }
+
+    .member div {
+        font-size: 0.8em;
+    }
+}
